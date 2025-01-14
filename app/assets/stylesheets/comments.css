@@ -1,0 +1,117 @@
+.comments-header {
+    font-family: "Jost", serif;      
+    padding: 6px 0px 0px 20px;
+    margin: 0;
+    font-style: italic;
+    display: flex;
+    border-bottom: 4px solid #5cd8e5;
+    background-color: white;
+}
+
+.author-banner {
+    background-color: black;
+    color: white;
+    font-family: "Jost", serif;      
+    font-style: italic;
+    padding: 3px 30px;
+}
+
+.logo-img {
+    height: 40px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 25%;
+}
+
+.broadcast-btn {
+    font-family: "Jost", serif;      
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+    background-color: #5cd8e5;
+    font-weight: 500;
+    font-style: italic;
+    border: 0;
+    cursor: pointer;
+}
+
+.broadcast-btn:hover {
+    background-color: #51bcc8;
+}
+
+.broadcast-btn:disabled {
+    background-color: #45a0aa;
+    cursor: default;
+}
+
+.new-post-container {
+    display: flex;
+    justify-content: center;
+}
+
+#comments {
+    list-style: none;
+    padding: 0;
+}
+
+.author {
+    font-family: "Jost", serif;      
+    font-style: italic;
+    font-weight: 800;
+}
+
+.comment {
+    border: 2px solid #5cd8e5;
+    padding: 6px
+}
+
+.comment:not(:last-child) {
+    border-bottom: 0px;
+}
+
+.author-avatar {
+    height: 32px;
+}
+
+.author-section {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: end;
+}
+
+.message-input {
+    border: 2px solid #5cd8e5;
+    resize: none;
+    border-radius: 20px;
+    padding: 12px;
+    height: 100px;
+}
+
+.separator {
+    border-left: 1px solid black;
+    height: 25px;
+    margin: 0 8px;
+    display: flex;
+}
+
+.submit-container {
+    display: flex;
+    align-items: center;
+}
+
+.bottom-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

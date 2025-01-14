@@ -1,0 +1,26 @@
+<%= form_with(model: comment, local: false, data: { controller: "character-counter" }) do |form| %>
+  <% if comment.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+        <% comment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-container">
+    <%= form.textarea :content, data: { action: "input->character-counter#updateCount", character_counter_target: "input" }, class: "message-input", maxLength: 200 %>
+    <div class="bottom-form">
+      <%= link_to "Cancel broadcast", comments_path %>
+    <div class="submit-container">
+      <span data-character-counter-target="count"></span>
+      <span class="separator"></span>
+      <%= form.submit "Broadcast Message", class: "broadcast-btn", data: { character_counter_target: "submit" } %>
+    </div>
+    </div>
+
+  </div>
+<% end %>

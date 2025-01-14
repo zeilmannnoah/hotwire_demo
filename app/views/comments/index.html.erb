@@ -1,0 +1,25 @@
+<div class='author-banner'>
+  <span>Noah Zeilmann</span>
+</div>
+<h1 class="comments-header"><%= image_tag "lightning-bolt.svg", alt: "Site Logo", class: "logo-img" %>HOTWIRE DEMO</h1>
+<div class='content'>
+  <%# <div class="flash" data-turbo-temporary>
+    Your message was broadcasted!
+  </div> %>
+  
+  
+
+<!-- Subscribe to all broadcasts sent to the 'comments' stream -->
+<%= turbo_stream_from "comments" %>
+
+<!-- This is where we want to load the form -->
+<turbo-frame id="main-content"><div class='new-post-container'>
+<%= link_to "New Broadcast", new_comment_path, data: { turbo_frame: "main-content" }, class: "broadcast-btn" %>
+  </div></turbo-frame>
+
+<ul id="comments">
+  <% @comments.each do |comment| %>
+    <%= render comment %>
+  <% end %>
+</ul>
+</div>
